@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Student Profile Form</title>
+<body>
+
+    <h1>Student Profile Form</h1>
+
+    <label>Name: <input type="text" id="name" /></label><br><br>
+    <label>Age: <input type="text" id="age" /></label><br><br>
+    <label>School: <input type="text" id="school" /></label><br><br>
+
+    <button py-click="generate_message()">Generate Message</button>
+
+    <div id="output" style="white-space: pre-wrap; margin-top: 20px;"></div>
+
+    <py-config>
+        [[fetch]]
+        files = ["main.py"]
+    </py-config>
+    <script type="py" src="main.py"></script>
+
+</body>
+</head>
